@@ -36,7 +36,7 @@ simply logs the tag text;
 Let’s first filter the data we need - filter the recipeData variable
 ```
 
-#### _Task 5_ ❌
+#### _Task 5_ ✅
 
 ```
 Extend router functionality
@@ -48,7 +48,7 @@ be displayed into tagContainer
 Use createCard function for each of the filtered recipes
 ```
 
-#### _Task 6_ ❌
+#### _Task 6_ ✅
 
 ```
 Add a click event listener on the logo (header element), that should bring us on the homepage (empty hash).

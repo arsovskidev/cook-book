@@ -105,6 +105,11 @@ function renderRecipe() {
 }
 
 //Exercise 6 - return to home page
+let headerElement = document.getElementById("headerElement");
+headerElement.addEventListener("click", function (e) {
+  e.preventDefault();
+  location.hash = "";
+});
 
 // Exercise 1 - draw cards on screen using the
 // createCard function.
