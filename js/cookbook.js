@@ -33,6 +33,22 @@ function createCard(cardData) {
     let tagLink = document.createElement("a");
     tagLink.innerText = tag;
     contents.appendChild(tagLink);
+
+    tagLink.addEventListener("click", function (e) {
+      let clickedTag = e.target.innerText;
+
+      let filteredData = recipeData.filter((oneRecipe) => {
+        return oneRecipe.tags.includes(clickedTag);
+      });
+
+      tagContainer.innerHTML = "";
+      for (let i = 0; i < filteredData.length; i++) {
+        let card = createCard(filteredData[i]);
+        tagContainer.appendChild(card);
+      }
+
+      location.hash = "#tag-" + clickedTag;
+    });
   });
 
   actions.classList.add("card-action");
@@ -104,8 +120,19 @@ function handleRoute() {
     cardContainer.style.display = "flex";
     fullRecipeContainer.style.display = "none";
     tagContainer.style.display = "none";
+  } else if (currentHash.includes("tag-")) {
+    tagContainer.style.display = "flex";
+    cardContainer.style.display = "none";
+    fullRecipeContainer.style.display = "none";
+  } else {
+    renderRecipe();
+    fullRecipeContainer.style.display = "flex";
+    cardContainer.style.display = "none";
+    tagContainer.style.display = "none";
   }
 }
 
-window.addEventListener("load", handleRoute());
+window.addEventListener("load", handleRoute);
+window.addEventListener("hashchange", handleRoute);
+
 //Exercise 2

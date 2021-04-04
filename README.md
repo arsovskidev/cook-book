@@ -19,7 +19,7 @@ Besure that reloading the page should keep the
 last shown container visible
 ```
 
-#### _Task 3_ ❌
+#### _Task 3_ ✅
 
 ```
 Clicking on the “Open Recipe” button should show recipe details
@@ -27,7 +27,7 @@ Extend the router, hide the cardContainer and show fullRecipeContainer
 section Invoke the renderRecipe function
 ```
 
-#### _Task 4_ ❌
+#### _Task 4_ ✅
 
 ```
 The tags in the recipe list aren’t currently clickable - let’s fix that 😊
