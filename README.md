@@ -1,6 +1,6 @@
 # Cook Book
 
-#### _Task 1_ ❌
+#### _Task 1_ ✅
 
 ```
 Using the cookbook.js file:
