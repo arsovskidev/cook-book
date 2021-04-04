@@ -98,4 +98,14 @@ for (let i = 0; i < recipeData.length; i++) {
   cardContainer.appendChild(card);
 }
 
+function handleRoute() {
+  let currentHash = location.hash;
+  if (currentHash == "" || currentHash == "#") {
+    cardContainer.style.display = "flex";
+    fullRecipeContainer.style.display = "none";
+    tagContainer.style.display = "none";
+  }
+}
+
+window.addEventListener("load", handleRoute());
 //Exercise 2

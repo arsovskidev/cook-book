@@ -8,7 +8,7 @@ Use the createCard method to draw all recipes on screen.
 Hint: it’s simplest to iterate over all recipes and invoke createCard for each of them.
 ```
 
-#### _Task 2_ ❌
+#### _Task 2_ ✅
 
 ```
 Create a “Router”
