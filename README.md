@@ -54,7 +54,7 @@ Use createCard function for each of the filtered recipes
 Add a click event listener on the logo (header element), that should bring us on the homepage (empty hash).
 ```
 
-#### _Task 7_ ❌
+#### _Task 7_ ✅
 
 ```
 On the homepage under “What are we cooking today?” add a simple search form with search button.

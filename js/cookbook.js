@@ -125,8 +125,15 @@ function handleRoute() {
     cardContainer.style.display = "flex";
     fullRecipeContainer.style.display = "none";
     tagContainer.style.display = "none";
+    searchContainer.style.display = "none";
   } else if (currentHash.includes("tag-")) {
     tagContainer.style.display = "flex";
+    cardContainer.style.display = "none";
+    fullRecipeContainer.style.display = "none";
+    searchContainer.style.display = "none";
+  } else if (currentHash.includes("search-")) {
+    searchContainer.style.display = "flex";
+    tagContainer.style.display = "none";
     cardContainer.style.display = "none";
     fullRecipeContainer.style.display = "none";
   } else {
@@ -134,10 +141,28 @@ function handleRoute() {
     fullRecipeContainer.style.display = "flex";
     cardContainer.style.display = "none";
     tagContainer.style.display = "none";
+    searchContainer.style.display = "none";
   }
 }
 
 window.addEventListener("load", handleRoute);
 window.addEventListener("hashchange", handleRoute);
 
-//Exercise 2
+//Task 7
+document.getElementById("search-btn").addEventListener("click", function (e) {
+  let value = document.getElementById("search-text").value;
+  console.log(value);
+
+  let filteredData = recipeData.filter((oneRecipe) => {
+    return oneRecipe.name.toLowerCase().includes(value.toLowerCase());
+  });
+
+  searchContainer.innerHTML = "";
+
+  for (i = 0; i < filteredData.length; i++) {
+    let card = createCard(filteredData[i]);
+    searchContainer.appendChild(card);
+  }
+
+  location.hash = "search-" + value;
+});
